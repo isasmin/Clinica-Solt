@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solt - Clínica de Estética</title>
+  <meta name="description" content="Solt Clínica de Estética - Tratamentos faciais, corporais e bem-estar com atendimento humanizado." />
+  <link rel="stylesheet" href="./css/index.css">
+    
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Solt</div>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    <ul class="menu" id="menu">
+      <li><a href="#about" class="active">Sobre</a></li>
+      <li><a href="#services">Tratamentos</a></li>
+      <li><a href="#testimonials">Depoimentos</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Cuidando da sua beleza com carinho e excelência</h1>
+    <p>Tratamentos personalizados para realçar sua melhor versão em um ambiente acolhedor.</p>
+    <a href="#contact" class="btn">Ver Mais</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-text">
+    <h2>Sobre a Solt</h2>
+    <p>Na Solt, aplicamos técnicas avançadas com um olhar humano. Cada detalhe é pensado para que você se sinta valorizada, acolhida e confiante. Nossa equipe qualificada está pronta para oferecer o melhor em estética facial, corporal, depilação e massagens.</p>
+  </div>
+  <div class="about-image">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=870&q=80" alt="Clínica Solt">
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Tratamentos</h2>
+  <div class="services-grid">
+    <div class="service-item" tabindex="0">
+      <div class="service-icon">💆‍♀️</div>
+      <div class="service-title">Facial</div>
+      <p class="service-desc">Tratamentos para renovar, hidratar e rejuvenescer sua pele, realçando sua beleza natural.</p>
+    </div>
+    <div class="service-item" tabindex="0">
+      <div class="service-icon">🧖‍♀️</div>
+      <div class="service-title">Corporal</div>
+      <p class="service-desc">Procedimentos que melhoram a aparência e o bem-estar do seu corpo com técnicas modernas.</p>
+    </div>
+    <div class="service-item" tabindex="0">
+      <div class="service-icon">🪒</div>
+      <div class="service-title">Depilação</div>
+      <p class="service-desc">Métodos eficazes e confortáveis para remoção de pelos, respeitando sua pele.</p>
+    </div>
+    <div class="service-item" tabindex="0">
+      <div class="service-icon">🤲</div>
+      <div class="service-title">Massagem</div>
+      <p class="service-desc">Relaxamento e alívio das tensões para restaurar seu equilíbrio corporal e mental.</p>
+    </div>
+  </div>
+  <a href="#services" class="view-more">Ver Mais Tratamentos</a>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <h2>O que Nossas Clientes Dizem</h2>
+  <div class="testimonial">"O atendimento é impecável e os resultados são visíveis desde a primeira sessão!" – Larissa M.</div>
+  <div class="testimonial">"Espaço lindo e profissionais muito atenciosos." – Juliana A.</div>
+  <div class="testimonial">"Me sinto renovada e confiante após cada visita." – Ana C.</div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Entre em Contato</h2>
+  <form onsubmit="event.preventDefault(); alert('Mensagem enviada! Em breve entraremos em contato.'); this.reset();">
+    <input type="text" name="name" placeholder="Seu nome" required aria-label="Seu nome" />
+    <input type="email" name="email" placeholder="Seu e-mail" required aria-label="Seu e-mail" />
+    <textarea name="message" placeholder="Sua mensagem" rows="4" required aria-label="Sua mensagem"></textarea>
+    <button type="submit">Enviar Mensagem</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 Solt Estética Natural. Todos os direitos reservados. | CNPJ: 00.000.000/0001-00
+</footer>
+
+<div class="popup" id="emailPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" aria-hidden="true">
+  <div
