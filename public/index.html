@@ -3,21 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Solt - Clínica de Estética</title>
-  <meta name="description" content="Solt Clínica de Estética - Tratamentos faciais, corporais e bem-estar com atendimento humanizado." />
+  <title>SOLT - Clínica de Estética</title>
+  <meta name="description" content="Solt Clínica de Estética - Procedimentos faciais, corporais e bem-estar com atendimento humanizado." />
   <link rel="stylesheet" href="./css/index.css">
-    
+</head>
 <body>
 
 <header>
   <nav>
-    <div class="logo">Solt</div>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    <a href="index.html" class="logo">SOLT</a>
     <ul class="menu" id="menu">
-      <li><a href="#about" class="active">Sobre</a></li>
-      <li><a href="#services">Tratamentos</a></li>
-      <li><a href="#testimonials">Depoimentos</a></li>
-      <li><a href="#contact">Contato</a></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobrenos.html">Sobre Nós</a></li>
+      <li><a href="procedimentos.html">Procedimentos</a></li>
     </ul>
   </nav>
 </header>
@@ -26,7 +24,7 @@
   <div class="hero-content">
     <h1>Cuidando da sua beleza com carinho e excelência</h1>
     <p>Tratamentos personalizados para realçar sua melhor versão em um ambiente acolhedor.</p>
-    <a href="#contact" class="btn">Ver Mais</a>
+    <a href="sobrenos.html" class="btn">Ver Mais</a>
   </div>
 </section>
 
@@ -79,14 +77,25 @@
   <form onsubmit="event.preventDefault(); alert('Mensagem enviada! Em breve entraremos em contato.'); this.reset();">
     <input type="text" name="name" placeholder="Seu nome" required aria-label="Seu nome" />
     <input type="email" name="email" placeholder="Seu e-mail" required aria-label="Seu e-mail" />
-    <textarea name="message" placeholder="Sua mensagem" rows="4" required aria-label="Sua mensagem"></textarea>
-    <button type="submit">Enviar Mensagem</button>
+    <textarea name="message" placeholder="Sua mensagem" rows="5" required aria-label="Sua mensagem"></textarea>
+    <button type="submit">Enviar</button>
   </form>
 </section>
 
 <footer>
-  &copy; 2025 Solt Estética Natural. Todos os direitos reservados. | CNPJ: 00.000.000/0001-00
+  <p>&copy; 2025 SOLT - Todos os direitos reservados.</p>
 </footer>
 
-<div class="popup" id="emailPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" aria-hidden="true">
-  <div
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !expanded);
+  });
+</script>
+
+</body>
+</html>
