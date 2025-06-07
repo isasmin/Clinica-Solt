@@ -27,13 +27,14 @@
     header {
       background: transparent;
       position: fixed;
-      width: 100%;
+      width:100%;
       top: 0;
       left: 0;
       z-index: 100;
       backdrop-filter: blur(10px);
-      background-color: #473430;
+      background-color: #5f4945;
       box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      padding: 8px 20px
     }
     nav {
       max-width: 1200px;
@@ -118,7 +119,10 @@
       background-size: cover;
       background-position: center 18%;
       background-repeat: no-repeat;
+      margin-top: 80px;
     }
+
+  
 
     .hero-content {
       position: relative;
@@ -142,7 +146,7 @@
 
     .hero p.bemvindo {
       position: absolute;
-      left: 15rem;
+      left: 10rem;
       top: 40%;
       font-size: 1.5rem;
       color: #fff;
