@@ -25,7 +25,7 @@ img {
 
 
 header {
-  background-color: #856a65;
+  background-color: #705151;
   backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
@@ -70,7 +70,7 @@ ul.menu {
   gap: 2rem;
 }
 
-/* Desktop - Menu horizontal sempre visível */
+/* menu horizontal sempre visivel p pc  */
 @media (min-width: 769px) {
   ul.menu {
     position: static;
@@ -101,7 +101,7 @@ ul.menu {
   }
 }
 
-/* Mobile - Menu sanduíche visível e menu lateral escondido por padrão */
+/* menu sancuiche p mobile, menu lateral escondido */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -134,7 +134,7 @@ ul.menu {
     color: #5a4633;
   }
 
-  /* Ajustes hero para mobile */
+  /* hero p  mobile (ajustar) */
   .hero p.bemvindo {
     left: 2rem;
     top: 30%;
@@ -149,7 +149,6 @@ ul.menu {
   }
 }
 
-/* Responsividade intermediária */
 @media (max-width: 1024px) {
   nav {
     padding: 1rem;
@@ -165,10 +164,10 @@ ul.menu {
 /* Mobile menor */
 @media (max-width: 480px) {
   .hero-content h2 {
-    font-size: 1.75rem;
+    font-size: 0.5rem;
   }
   .hero-content p {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -199,7 +198,7 @@ ul.menu {
   position: relative;
   max-width: 700px;
   z-index: 1;
-  margin-left: auto;
+  margin-left: auto;  
   margin-right: 0;
   text-align: left;
 }
