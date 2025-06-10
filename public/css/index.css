@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -24,7 +23,7 @@ img {
   display: block;
 }
 
-/* Header / Nav */
+
 header {
   background-color: #856a65;
   backdrop-filter: blur(10px);
@@ -53,7 +52,7 @@ nav {
   user-select: none;
 }
 
-/* Botão menu sanduíche - só no mobile */
+/* menu sanduiche so no mobile*/
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -63,7 +62,7 @@ nav {
   cursor: pointer;
 }
 
-/* Menu padrão (sempre visível no desktop) */
+/* menu smp visivel no pc */
 ul.menu {
   list-style: none;
   margin: 0;
@@ -187,6 +186,7 @@ ul.menu {
   background-position: center 18%;
   background-repeat: no-repeat;
   margin-top: 80px;
+  min-height: 600px;
 }
 .hero::after {
   content: '';
@@ -213,6 +213,29 @@ ul.menu {
   margin: 0;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+
+/* Responsive adjustment for hero p.bemvindo */
+@media (max-width: 1024px) {
+  .hero p.bemvindo {
+    left: 6rem;
+    font-size: 1.3rem;
+    top: 38%;
+  }
+}
+@media (max-width: 768px) {
+  .hero p.bemvindo {
+    left: 2rem;
+    font-size: 1.2rem;
+    top: 30%;
+    position: static;
+    margin-bottom: 1rem;
+  }
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 .hero-content h2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -405,7 +428,7 @@ footer a:hover {
   color: #dbdad9;
 }
 
-/* Scrollbar estilizada para o menu mobile */
+/* scrollbar menu mobile */
 @media (max-width: 768px) {
   ul.menu {
     scrollbar-width: thin;
