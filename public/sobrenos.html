@@ -1,11 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre Nós</title>
+  <link rel="stylesheet" href="./css/sobrenos.css" />
 </head>
 <body>
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="./assets/logo.png" alt="Logo" />
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobrenos.html" class="active">Sobre Nós</a></li>
+      <li><a href="procedimentos.html">Procedimentos</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1>Sobre Nós</h1>
+
+    <section id="profissionais">
+      <h2>Profissionais</h2>
+      <ul>
+        <li><strong>Luana</strong> – funcao</li>
+        <li><strong>Sheila</strong> – funcao </li>
+        <li><strong>Otávio</strong> – funcao</li>
+        <li><strong>Thayz</strong> – funcao</li>
+      </ul>
+    </section>
+
+    <section id="clinica-media">
+      <h2>Fotos e Vídeos da Clínica</h2>
+      <div class="media-gallery">
+        <img src="assets/clinica1.jpg" alt="Foto da clínica 1" />
+        <img src="assets/clinica2.jpg" alt="Foto da clínica 2" />
+        <video controls width="320" height="240">
+          <source src="assets/clinica-tour.mp4" type="video/mp4" />
+          Seu navegador não suporta o vídeo.
+        </video>
+      </div>
+    </section>
+
+    <section id="localizacao">
+      <h2>Localização</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.123456789!2d-46.633309!3d-23.550520!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b5c8f9b6b1%3A0xf6f1f6f1f6f1f6f1!2sSão%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1597690000000!5m2!1spt-BR!2sbr"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+    <section id="sobre-empresa">
+      <h2>Sobre a Empresa</h2>
+      <p>
+        Fundada em 2010, nossa clínica nasceu do sonho de oferecer serviços de alta qualidade em estética e saúde, sempre com foco no bem-estar dos nossos clientes. Com uma equipe multidisciplinar e equipamentos modernos, buscamos inovar e proporcionar experiências únicas.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    // Código JS para o menu hambúrguer (igual ao index.html)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+
+
     Profissionais:
     (LISTAR PROFISSIONAIS E SUAS RESPECTIVAS FUNCOES)<BR>
 
@@ -27,6 +101,18 @@ lg	64rem (1024px)	@media (width >= 64rem) { ... }
 xl	80rem (1280px)	@media (width >= 80rem) { ... }
 2xl	96rem (1536px)	@media (width >= 96rem) { ... }
         <!-- python3 -m http.server -->
+<section class="hero-carousel">
+  <div class="carousel-container">
+    <div class="carousel-slide active" style="background-image: url('img1.jpg');"></div>
+    <div class="carousel-slide" style="background-image: url('img2.jpg');"></div>
 
-</body>
-</html>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+
+    <div class="carousel-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
