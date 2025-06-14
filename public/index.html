@@ -6,20 +6,26 @@
   <title>SOLT - Clínica de Estética</title>
   <meta name="description" content="Solt Clínica de Estética - Procedimentos faciais, corporais e bem-estar com atendimento humanizado." />
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" href="./assets/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./assets/logo.png" />
+
 </head>
 <body>
 <header>
   <nav>
-    <a href="index.html" class="logo">LOGO AQUI</a>
-    <button class="menu-toggle">&#9776;</button>
+    <a href="index.html" class="logo">
+      <img src="./assets/logo.png" alt="Logo" />
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
     <ul class="menu" id="menu">
       <li><a href="index.html">Início</a></li>
       <li><a href="sobrenos.html">Sobre Nós</a></li>
       <li><a href="procedimentos.html">Procedimentos</a></li>
     </ul>
-
   </nav>
 </header>
+
 
 <section class="hero" id="home">
   <p class="bemvindo">Bem-vindo(a) à Clínica SOLT</p>
@@ -44,7 +50,7 @@
   <h2>Tratamentos</h2>
   <div class="services-grid">
     <div class="service-item" tabindex="0">
-      <div class="service-icon">💆‍♀️</div>
+      <div class="service-icon">🧖‍♀️</div>
       <div class="service-title">Facial</div>
       <p class="service-desc">Tratamentos para renovar, hidratar e rejuvenescer sua pele, realçando sua beleza natural.</p>
     </div>
@@ -59,7 +65,7 @@
       <p class="service-desc">Métodos eficazes e confortáveis para remoção de pelos, respeitando sua pele.</p>
     </div>
     <div class="service-item" tabindex="0">
-      <div class="service-icon">🤲</div>
+      <div class="service-icon">🩊</div>
       <div class="service-title">Massagem</div>
       <p class="service-desc">Relaxamento e alívio das tensões para restaurar seu equilíbrio corporal e mental.</p>
     </div>
@@ -74,7 +80,7 @@
   <div class="testimonial">"Me sinto renovada e confiante após cada visita." – Ana C.</div>
 </section>
 
-<section class="contact" id="contact"   
+<section class="contact" id="contact">
   <h2>Entre em Contato</h2>
   <form onsubmit="event.preventDefault(); alert('Mensagem enviada! Em breve entraremos em contato.'); this.reset();">
     <input type="text" name="name" placeholder="Seu nome" required aria-label="Seu nome" />
@@ -88,6 +94,7 @@
   <p>&copy; 2025 SOLT - Todos os direitos reservados.</p>
 </footer>
 
+<!-- seus scripts atuais -->
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.getElementById('menu');
@@ -96,6 +103,74 @@
     menu.classList.toggle('show');
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', !expanded);
+  });
+</script>
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let current = 0;
+  let interval = setInterval(nextSlide, 5000);
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    current = index;
+  }
+
+  function nextSlide() {
+    let next = (current + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function prevSlide() {
+    let prev = (current - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetInterval();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetInterval();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      showSlide(i);
+      resetInterval();
+    });
+  });
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 5000);
+  }
+</script>
+
+<!-- Aqui o script do header -->
+<script>
+  let lastScrollTop = 0;
+  const header = document.querySelector('header'); // ajusta se seu header tiver outra classe ou id
+
+  window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // rolou pra baixo — esconde o header
+      header.classList.add('hide');
+    } else {
+      // rolou pra cima — mostra o header
+      header.classList.remove('hide');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 </script>
 
