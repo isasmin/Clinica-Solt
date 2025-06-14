@@ -1,4 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Extra small (XS): <576px – já é padrão, não precisa declarar) */
+
+/* Small (SM): ≥576px */
+@media (min-width: 576px) {
+
+}
+
+/* Medium (MD): ≥768px */
+@media (min-width: 768px) {
+
+}
+
+/* Large (LG): ≥992px */
+@media (min-width: 992px) {
+
+
+}
+
+/* Extra Large (XL): ≥1200px */
+@media (min-width: 1200px) {
+
+}
+
+/* Extra Extra Large (XXL): ≥1400px */
+@media (min-width: 1400px) {
+
+}
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -29,11 +57,18 @@ header {
   backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
+  height: 140px;          /* define altura menor */
+  line-height: 50px;     /* alinha verticalmente o texto */
+  padding: 0 1rem;       /* ajusta o espaçamento horizontal */
   top: 0;
   left: 0;
   z-index: 100;
   box-shadow: 0 1px 5px rgba(0,0,0,0.1);
   padding: 8px 20px;
+}
+
+header.hide {
+    top: -50px; /* esconde o header para cima */
 }
 nav {
   max-width: 1200px;
@@ -69,6 +104,19 @@ ul.menu {
   padding: 0;
   gap: 2rem;
 }
+
+ul.menu li {
+  margin-bottom: 8rem;
+  /* para subir o texto, diminua o espaçamento de cima */
+  padding-top: 0.2rem;  /* ajuste conforme quiser */
+  padding-bottom: 0;    /* remove espaçamento inferior */
+}
+
+.logo img {
+  position: relative;
+  top: -55px; /* move 10px para cima */
+}
+
 
 /* menu horizontal sempre visivel p pc  */
 @media (min-width: 769px) {
@@ -147,6 +195,12 @@ ul.menu {
   section.about {
     flex-direction: column;
   }
+  .hero {
+    background-image: url('../assets/banner1m.jpg');
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -163,18 +217,116 @@ ul.menu {
 
 /* Mobile menor */
 @media (max-width: 480px) {
+  .hero {
+    height: 400px; /* altura menor pra celular */
+    background-position: 90% 28%; /* muda o foco da imagem */
+  }
   .hero-content h2 {
-    font-size: 0.5rem;
+    font-size: 1.2rem;
   }
   .hero-content p {
-    font-size: 0.5rem;
+    font-size: 1rem;
+  }
+}
+/* Telas pequenas (celulares) */
+@media (max-width: 768px) {
+  .hero-carousel {
+    height: 70vh; /* Menor altura para celulares */
+  }
+
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.6rem;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .carousel-dots {
+    bottom: 10px;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
+/* Telas muito pequenas (celulares estreitos tipo iPhone SE) */
+@media (max-width: 480px) {
+  .hero-carousel {
+    height: 60vh;
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Telas grandes (desktops grandes, ultrawide) */
+@media (min-width: 1400px) {
+  .hero-carousel {
+    height: 95vh;
+  }
+
+  .carousel-btn {
+    font-size: 2.5rem;
+    padding: 1.2rem;
+  }
+
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* === CAROUSEL / BANNER ROTATIVO === */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 60vh;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slide 15s infinite;
+}
+
+.carousel-slide {
+  flex: 1 0 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Animação de rotação */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  .carousel {
+    height: 40vh;
   }
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,6 +386,9 @@ ul.menu {
     text-align: center;
   }
 }
+
+
+
 
 .hero-content h2 {
   font-size: 2.5rem;
@@ -381,66 +536,191 @@ section.contact {
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 .contact input, .contact textarea {
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
+  padding: 1rem;
   border: 1px solid #ccc;
+  border-radius: 10px;
   font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
   resize: vertical;
 }
 .contact button {
   background: #cbb89d;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
-  font-weight: 600;
+  padding: 1rem;
   border-radius: 50px;
-  color: #55332f;
+  font-weight: 600;
   cursor: pointer;
+  color: #55332f;
+  box-shadow: 0 6px 15px rgba(203, 184, 157, 0.6);
   transition: background 0.3s ease;
-  margin-top: 1rem;
-  box-shadow: 0 6px 20px rgba(203,184,157,0.6);
 }
 .contact button:hover {
   background: #a58b6f;
   color: white;
-  box-shadow: 0 8px 24px rgba(165,139,111,0.7);
+  box-shadow: 0 8px 25px rgba(165, 139, 111, 0.7);
 }
 
 /* Footer */
 footer {
-  background: #856a65;
+  background: #705151;
   color: #dbdad9;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 0;
   font-size: 0.9rem;
   user-select: none;
-  margin-top: 4rem;
-}
-footer a {
-  color: #cbb89d;
-}
-footer a:hover {
-  color: #dbdad9;
+  margin-top: 3rem;
 }
 
-/* scrollbar menu mobile */
-@media (max-width: 768px) {
-  ul.menu {
-    scrollbar-width: thin;
-    scrollbar-color: #cbb89d #f7f3ef;
+/* === GRID 12 COLUNAS STYLE BOOTSTRAP === */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
   }
-  ul.menu::-webkit-scrollbar {
-    width: 8px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
   }
-  ul.menu::-webkit-scrollbar-track {
-    background: #f7f3ef;
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
   }
-  ul.menu::-webkit-scrollbar-thumb {
-    background-color: #cbb89d;
-    border-radius: 20px;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  display: block; 
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;;
+}
+
+[class*="col-"] {
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+}
+
+/* 12 colunas para xs (padrão) */
+.col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+.col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+.col-3 { flex: 0 0 25%; max-width: 25%; }
+.col-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+.col-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+.col-6 { flex: 0 0 50%; max-width: 50%; }
+.col-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+.col-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+.col-9 { flex: 0 0 75%; max-width: 75%; }
+.col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+.col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+
+/* Colunas responsivas */
+
+/* Small >=576px */
+@media (min-width: 576px) {
+  .col-sm-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-sm-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-sm-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-sm-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-sm-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-sm-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-sm-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-sm-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-sm-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-sm-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-sm-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-sm-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Medium >=768px */
+@media (min-width: 768px) {
+  .col-md-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-md-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-md-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-md-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-md-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-md-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-md-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-md-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-md-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-md-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Large >=992px */
+@media (min-width: 992px) {
+  .col-lg-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-lg-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-lg-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-lg-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-lg-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-lg-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-lg-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-lg-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-lg-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-lg-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Extra Large >=1200px */
+@media (min-width: 1200px) {
+  .col-xl-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-xl-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-xl-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-xl-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-xl-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-xl-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-xl-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-xl-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-xl-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-xl-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-xl-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-xl-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Extra Extra Large >=1400px */
+@media (min-width: 1400px) {
+  .col-xxl-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-xxl-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-xxl-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-xxl-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-xxl-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-xxl-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-xxl-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-xxl-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-xxl-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-xxl-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-xxl-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-xxl-12 { flex: 0 0 100%; max-width: 100%; }
 }
