@@ -1,66 +1,135 @@
-/* Fonte Poppins importada (caso não tenha ainda) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #f8f5f0; /* bege claro */
-  color: #4b3b2b; /* marrom escuro */
+  background-color: #f8f5f0;
+  color: #4b3b2b;
   line-height: 1.6;
 }
 
-nav {
-  background-color: #705151; /* marrom médio */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  position: sticky;
+/* ===== HEADER ===== */
+header {
+  background-color: #D4C098;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  height: 140px;
   top: 0;
-  z-index: 10;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav .logo img {
-  height: 40px;
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
 }
 
+.logo img {
+  height: 100px;
+  position: relative;
+  top: -10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #705D15;
+  cursor: pointer;
+}
+
+/* MENU BASE */
 .menu {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
 .menu li a {
-  color: #f8f5f0;
-  text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  color: #5a4633cc;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .menu li a:hover,
 .menu li a.active {
-  color: #d9b382; /* tom dourado suave */
+  border-bottom: 2px solid #705D15;
+  color: #705D15;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: #f8f5f0;
-  cursor: pointer;
+/* ===== MENU MOBILE ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    top: 140px;
+    right: 0;
+    background: #f7f3ef;
+    width: 220px;
+    padding: 1rem;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid #ddd;
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+    z-index: 101;
+    display: flex;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    margin-bottom: 1.5rem;
+  }
+
+  .menu li a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #D4C098;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+
+  .menu li a:hover {
+    color: #705D15;
+    border-bottom: 2px solid #705D15;
+  }
 }
 
-/* Container principal */
+/* ===== CONTEÚDO PRINCIPAL ===== */
 .container {
   max-width: 1000px;
-  margin: 2rem auto;
+  margin: 160px auto 2rem; /* margem superior ajustada por causa do header fixo */
   padding: 0 1rem;
 }
 
-/* Títulos */
+/* TÍTULOS */
 h1, h2 {
   color: #6b4c3b;
   margin-bottom: 1rem;
@@ -81,7 +150,7 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-/* Lista de profissionais */
+/* LISTA DE PROFISSIONAIS */
 #profissionais ul {
   list-style: disc inside;
   font-weight: 400;
@@ -95,7 +164,7 @@ h2 {
   margin-bottom: 0.8rem;
 }
 
-/* Galeria de imagens e vídeo */
+/* GALERIA DE MÍDIA */
 .media-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -112,7 +181,7 @@ h2 {
   box-shadow: 0 2px 8px rgba(107, 76, 59, 0.3);
 }
 
-/* Localização - mapa */
+/* LOCALIZAÇÃO - MAPA */
 #localizacao iframe {
   display: block;
   width: 100%;
@@ -124,7 +193,7 @@ h2 {
   border: none;
 }
 
-/* Sobre a empresa */
+/* SOBRE A EMPRESA */
 #sobre-empresa p {
   max-width: 700px;
   margin: 0 auto 3rem;
@@ -132,33 +201,4 @@ h2 {
   color: #5a4633;
   line-height: 1.7;
   text-align: center;
-}
-
-/* Responsividade menu */
-@media (max-width: 768px) {
-  .menu {
-    position: fixed;
-    top: 60px;
-    right: 0;
-    background-color: #6b4c3b;
-    height: calc(100% - 60px);
-    width: 200px;
-    flex-direction: column;
-    padding: 1rem;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 100;
-  }
-
-  .menu.active {
-    transform: translateX(0);
-  }
-
-  .menu li {
-    margin-bottom: 1.5rem;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
 }
