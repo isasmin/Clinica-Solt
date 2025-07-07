@@ -22,35 +22,29 @@ header {
   top: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  padding: 0 2rem; /* mesmo padding do nav */
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
 }
 
 nav {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
   flex-wrap: wrap;
+  padding: 0; /* sem padding extra para não somar ao do header */
 }
 
 .logo img {
-  height: 100px;
-  position: relative;
-  top: -10px;
+  height: 150px; /* igual do seu primeiro código */
+  position: static; /* remove o top que desloca a logo */
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #705D15;
-  cursor: pointer;
-}
-
-/* MENU BASE */
+/* Menu base */
 .menu {
   list-style: none;
   display: flex;
@@ -74,7 +68,12 @@ nav {
   color: #705D15;
 }
 
-/* ===== MENU MOBILE ===== */
+.menu-toggle {
+  display: none; /* escondido por padrão */
+}
+
+
+/* Menu Mobile */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -121,6 +120,7 @@ nav {
     border-bottom: 2px solid #705D15;
   }
 }
+
 
 /* ===== CONTEÚDO PRINCIPAL ===== */
 .container {
@@ -202,3 +202,5 @@ h2 {
   line-height: 1.7;
   text-align: center;
 }
+
+
