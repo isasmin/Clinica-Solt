@@ -29,24 +29,20 @@ header {
   padding: 8px 20px;
 }
 
-
 nav {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0; /* sem padding extra para não somar ao do header */
 }
 
 .logo img {
-  height: 150px; /* igual do seu primeiro código */
-  position: static; /* remove o top que desloca a logo */
+  height: 150px;
+  display: block;
 }
 
-/* Menu base */
 .menu {
   list-style: none;
   display: flex;
@@ -71,9 +67,13 @@ nav {
 }
 
 .menu-toggle {
-  display: none; /* escondido por padrão */
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
-
 
 /* Menu Mobile */
 @media (max-width: 768px) {
@@ -113,7 +113,6 @@ nav {
     color: #D4C098;
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    padding-bottom: 2px;
     transition: color 0.3s ease, border-bottom 0.3s ease;
   }
 
@@ -123,50 +122,45 @@ nav {
   }
 }
 
-
-/* ===== CONTEÚDO PRINCIPAL ===== */
+/* ===== CONTAINER PRINCIPAL ===== */
 .container {
   max-width: 1000px;
-  margin: 160px auto 2rem; /* margem superior ajustada por causa do header fixo */
+  margin: 160px auto 2rem;
   padding: 0 1rem;
 }
 
-/* TÍTULOS */
-h1, h2 {
-  color: #6b4c3b;
-  margin-bottom: 1rem;
-}
-
 h1 {
-  font-weight: 700;
   font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
+  color: #6b4c3b;
   margin-bottom: 3rem;
 }
 
 h2 {
-  font-weight: 600;
   font-size: 1.8rem;
+  font-weight: 600;
+  color: #6b4c3b;
   border-bottom: 2px solid #d9b382;
   padding-bottom: 0.3rem;
   margin-bottom: 1.5rem;
 }
 
-/* LISTA DE PROFISSIONAIS */
+/* ===== LISTA DE PROCEDIMENTOS ===== */
 #profissionais ul {
   list-style: disc inside;
-  font-weight: 400;
   font-size: 1.1rem;
+  font-weight: 400;
   max-width: 600px;
   margin: 0 auto 3rem;
   color: #5a4633;
 }
 
-#profissionais ul li {
+#profissionais li {
   margin-bottom: 0.8rem;
 }
 
-/* GALERIA DE MÍDIA */
+/* ===== GALERIA DE IMAGENS ===== */
 .media-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -175,27 +169,14 @@ h2 {
   margin-bottom: 3rem;
 }
 
-.media-gallery img,
-.media-gallery video {
+.media-gallery img {
   border-radius: 8px;
   max-width: 320px;
   width: 100%;
   box-shadow: 0 2px 8px rgba(107, 76, 59, 0.3);
 }
 
-/* LOCALIZAÇÃO - MAPA */
-#localizacao iframe {
-  display: block;
-  width: 100%;
-  max-width: 600px;
-  height: 400px;
-  margin: 0 auto 3rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(107, 76, 59, 0.3);
-  border: none;
-}
-
-/* SOBRE A EMPRESA */
+/* ===== SOBRE A EMPRESA ===== */
 #sobre-empresa p {
   max-width: 700px;
   margin: 0 auto 3rem;
@@ -205,12 +186,14 @@ h2 {
   text-align: center;
 }
 
+/* ===== FOOTER PADRÃO ===== */
 .footer {
   background-color: #705151;
   color: #f7f3ef;
   padding: 3rem 1.5rem;
   font-size: 0.95rem;
 }
+
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -219,27 +202,31 @@ h2 {
   justify-content: space-between;
   gap: 2rem;
 }
+
 .footer-column {
   flex: 1 1 250px;
   min-width: 200px;
 }
+
 .footer-column h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #cbb89d;
 }
+
 .footer-column p {
   margin: 0.3rem 0;
   line-height: 1.5;
 }
+
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
+
   .footer-column {
     max-width: 400px;
   }
 }
-

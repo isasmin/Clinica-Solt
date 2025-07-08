@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Procedimentos | SOLT Estética</title>
+  <link rel="stylesheet" href="./css/procedimentos.css" />
+  <link rel="icon" href="./assets/logo.png" type="image/png" />
 </head>
+
 <body>
-    colocar os numeros aumentando<br><br>
-    fotos dos procedimentos
+  <header>
+    <nav>
+      <a href="index.html" class="logo" aria-label="Página inicial - Clínica SOLT">
+        <img src="./assets/logo.png" alt="Logo Clínica SOLT" />
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+      <ul class="menu" id="menu" role="menu">
+        <li role="none"><a href="index.html" role="menuitem">Início</a></li>
+        <li role="none"><a href="sobrenos.html" role="menuitem">Sobre Nós</a></li>
+        <li role="none"><a href="procedimentos.html" role="menuitem" class="active">Procedimentos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Procedimentos</h1>
+
+    <section class="media-gallery" aria-label="Galeria de imagens dos procedimentos">
+      <img src="https://source.unsplash.com/400x300/?facial" alt="Procedimento Facial" />
+      <img src="https://source.unsplash.com/400x300/?body-care" alt="Procedimento Corporal" />
+      <img src="https://source.unsplash.com/400x300/?laser" alt="Depilação a Laser" />
+      <img src="https://source.unsplash.com/400x300/?massage" alt="Massagem" />
+    </section>
+
+    <section id="profissionais">
+      <h2>O que oferecemos</h2>
+      <ul>
+        <li>Limpeza de pele profunda</li>
+        <li>Tratamentos corporais redutores</li>
+        <li>Depilação a laser e cera</li>
+        <li>Drenagem linfática manual</li>
+        <li>Massagem relaxante e terapêutica</li>
+      </ul>
+    </section>
+
+    <section id="sobre-empresa">
+      <h2>Compromisso com sua beleza</h2>
+      <p>
+        Na SOLT, cada procedimento é pensado para valorizar sua autoestima com segurança, conforto e resultados reais.
+        Trabalhamos com tecnologia de ponta e uma equipe apaixonada pelo bem-estar.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Clínica SOLT</h4>
+        <p>Cuidando da sua beleza com carinho e excelência.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Contato</h4>
+        <p>📍 Rua Exemplo, 123 - São Paulo, SP</p>
+        <p>📞 (11) 99999-9999</p>
+        <p>✉️ contato@soltclinica.com.br</p>
+      </div>
+      <div class="footer-column">
+        <h4>Informações Legais</h4>
+        <p>CNPJ: 00.000.000/0001-00</p>
+        <p>&copy; 2025 SOLT - Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+    });
+  </script>
 </body>
 </html>

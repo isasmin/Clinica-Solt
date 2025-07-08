@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sobre Nós</title>
   <link rel="stylesheet" href="./css/sobrenos.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+
 </head>
 <body>
 <header>
@@ -67,21 +69,6 @@
     </section>
   </main>
 
-  <script>
-    // Código JS para o menu hambúrguer (igual ao index.html)
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-
-    menuToggle.addEventListener('click', () => {
-      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-      menuToggle.setAttribute('aria-expanded', !expanded);
-      menu.classList.toggle('active');
-    });
-  </script>
-</body>
-</html>
-
-
     Profissionais:
     (LISTAR PROFISSIONAIS E SUAS RESPECTIVAS FUNCOES)<BR>
 
@@ -101,20 +88,41 @@
 md	48rem (768px)	@media (width >= 48rem) { ... }
 lg	64rem (1024px)	@media (width >= 64rem) { ... }
 xl	80rem (1280px)	@media (width >= 80rem) { ... }
-2xl	96rem (1536px)	@media (width >= 96rem) { ... }
-        <!-- python3 -m http.server -->
-<section class="hero-carousel">
-  <div class="carousel-container">
-    <div class="carousel-slide active" style="background-image: url('img1.jpg');"></div>
-    <div class="carousel-slide" style="background-image: url('img2.jpg');"></div>
+2xl	96rem (1536px)	@media (width >= 96rem) { ... }  
 
-    <button class="carousel-btn prev">&#10094;</button>
-    <button class="carousel-btn next">&#10095;</button>
-
-    <div class="carousel-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <h4>Clínica SOLT</h4>
+      <p>Cuidando da sua beleza com carinho e excelência.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Contato</h4>
+      <p>📍 Rua Exemplo, 123 - São Paulo, SP</p>
+      <p>📞 (11) 99999-9999</p>
+      <p>✉️ contato@soltclinica.com.br</p>
+    </div>
+    <div class="footer-column">
+      <h4>Informações Legais</h4>
+      <p>CNPJ: 00.000.000/0001-00</p>
+      <p>&copy; 2025 SOLT - Todos os direitos reservados.</p>
     </div>
   </div>
-</section>
+</footer>
+
+
+  <script>
+    // Código JS para o menu hambúrguer (igual ao index.html)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+
+        <!-- python3 -m http.server -->
