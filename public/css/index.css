@@ -52,6 +52,7 @@ nav {
   padding: 2rem 2rem;
   flex-wrap: wrap;
 }
+
 .logo {
   font-weight: 700;
   font-size: 1.75rem;
@@ -550,8 +551,8 @@ section.contact {
 }
 
 .footer {
-  background-color: #705151;
-  color: #f7f3ef;
+  background-color: #D4c098;
+  color: #705151;
   padding: 3rem 1.5rem;
   font-size: 0.95rem;
 }
@@ -570,7 +571,7 @@ section.contact {
 .footer-column h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #cbb89d;
+  color: #533e3e;
 }
 .footer-column p {
   margin: 0.3rem 0;

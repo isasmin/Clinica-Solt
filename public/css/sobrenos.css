@@ -29,11 +29,14 @@ header {
   padding: 8px 20px;
 }
 
+header.hide {
+  top: -50px; /* esconde o header para cima */
+}
 
 nav {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,8 +45,17 @@ nav {
 }
 
 .logo img {
-  height: 150px; /* igual do seu primeiro código */
-  position: static; /* remove o top que desloca a logo */
+  width: 150px;
+  height: auto;
+  display: block;
+  position: relative;
+  top: -1.6px;
+  margin-left: 32px; /* ajuste o valor conforme quiser */
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* Menu base */
@@ -206,8 +218,8 @@ h2 {
 }
 
 .footer {
-  background-color: #705151;
-  color: #f7f3ef;
+  background-color: #D4c098;
+  color: #705151;
   padding: 3rem 1.5rem;
   font-size: 0.95rem;
 }
@@ -226,7 +238,7 @@ h2 {
 .footer-column h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #cbb89d;
+  color: #533e3e;
 }
 .footer-column p {
   margin: 0.3rem 0;

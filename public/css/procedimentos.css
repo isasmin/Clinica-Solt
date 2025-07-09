@@ -39,10 +39,15 @@ nav {
 }
 
 .logo img {
-  height: 150px;
+  width: 150px;
+  height: auto;
   display: block;
+  position: relative;
+  top: -1.6px;
+  margin-left: 32px; /* ajuste o valor conforme quiser */
 }
 
+/* Menu base */
 .menu {
   list-style: none;
   display: flex;
@@ -60,25 +65,37 @@ nav {
   transition: all 0.3s ease;
 }
 
-.menu li a:hover,
-.menu li a.active {
-  border-bottom: 2px solid #705D15;
-  color: #705D15;
+/* Prioriza hover até mesmo em .active */
+.menu li a:hover {
+  border-bottom: 2px solid #705D15 !important;
+  color: #705D15 !important;
 }
+
+/* Estado normal de active (sem destaque permanente) */
+.menu li a.active {
+  color: #5a4633cc;
+  border-bottom: 2px solid transparent;
+}
+
+
 
 .menu-toggle {
   display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
 }
 
 /* Menu Mobile */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #3f33089d;
+    cursor: pointer;
+    position: absolute;
+    top: 3rem;
+    right: 1.5rem;
+    z-index: 102;
   }
 
   .menu {
@@ -110,9 +127,10 @@ nav {
   .menu li a {
     font-weight: 600;
     font-size: 1rem;
-    color: #D4C098;
+    color: #5a4633;
     text-decoration: none;
     border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
     transition: color 0.3s ease, border-bottom 0.3s ease;
   }
 
@@ -122,12 +140,77 @@ nav {
   }
 }
 
+
 /* ===== CONTAINER PRINCIPAL ===== */
 .container {
   max-width: 1000px;
   margin: 160px auto 2rem;
   padding: 0 1rem;
 }
+
+.procedimento {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.procedimento:hover {
+  transform: translateY(-5px);
+}
+
+.procedimento .texto {
+  flex: 1;
+  padding: 2rem;
+}
+
+.procedimento .texto h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.procedimento .texto p {
+  font-size: 1rem;
+  color: #5a4633;
+  margin-bottom: 1.5rem;
+}
+
+.procedimento .texto button {
+  background: transparent;
+  border: 1px solid #b5bcc7;
+  color: #5a4633;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.procedimento .texto button:hover {
+  background: #705D15;
+  color: #fff;
+}
+
+.procedimento .imagem {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.procedimento .imagem img {
+  max-width: 200px;
+  height: auto;
+}
+
+.procedimento:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 
 h1 {
   font-size: 2.5rem;
@@ -146,19 +229,7 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-/* ===== LISTA DE PROCEDIMENTOS ===== */
-#profissionais ul {
-  list-style: disc inside;
-  font-size: 1.1rem;
-  font-weight: 400;
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  color: #5a4633;
-}
 
-#profissionais li {
-  margin-bottom: 0.8rem;
-}
 
 /* ===== GALERIA DE IMAGENS ===== */
 .media-gallery {
@@ -188,8 +259,8 @@ h2 {
 
 /* ===== FOOTER PADRÃO ===== */
 .footer {
-  background-color: #705151;
-  color: #f7f3ef;
+  background-color: #D4c098;
+  color: #705151;
   padding: 3rem 1.5rem;
   font-size: 0.95rem;
 }
@@ -211,7 +282,7 @@ h2 {
 .footer-column h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #cbb89d;
+  color: #533e3e;
 }
 
 .footer-column p {
