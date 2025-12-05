@@ -13,15 +13,14 @@ body {
   scroll-behavior: smooth;
 }
 
-/* ===== HEADER ===== */
 header {
   background-color: #D4c098;
   backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
-  height: 140px;          /* define altura menor */
-  line-height: 50px;     /* alinha verticalmente o texto */
-  padding: 0 1rem;       /* ajusta o espaçamento horizontal */
+  height: 140px;          
+  line-height: 50px;     
+  padding: 0 1rem;       
   top: 0;
   left: 0;
   z-index: 100;
@@ -47,7 +46,6 @@ nav {
   margin-left: 32px; /* ajuste o valor conforme quiser */
 }
 
-/* Menu base */
 .menu {
   list-style: none;
   display: flex;
@@ -65,13 +63,11 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* Prioriza hover até mesmo em .active */
 .menu li a:hover {
   border-bottom: 2px solid #705D15 !important;
   color: #705D15 !important;
 }
 
-/* Estado normal de active (sem destaque permanente) */
 .menu li a.active {
   color: #5a4633cc;
   border-bottom: 2px solid transparent;
@@ -83,7 +79,6 @@ nav {
   display: none;
 }
 
-/* Menu Mobile */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -141,7 +136,6 @@ nav {
 }
 
 
-/* ===== CONTAINER PRINCIPAL ===== */
 .container {
   max-width: 1000px;
   margin: 160px auto 2rem;
@@ -299,5 +293,42 @@ h2 {
 
   .footer-column {
     max-width: 400px;
+  }
+
+
+  .container {
+    margin-top: 170px;
+    padding: 0 1rem;
+  }
+
+  .procedimento {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .procedimento .texto {
+    padding: 1rem 0;
+  }
+
+  .procedimento .texto h3 {
+    font-size: 1.5rem;
+  }
+
+  .procedimento .texto p {
+    font-size: 1rem;
+  }
+
+  .procedimento .imagem {
+    display: none !important;
+  }
+
+  .procedimento:nth-child(even) {
+    flex-direction: column !important;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
   }
 }
