@@ -154,6 +154,13 @@ nav {
   transition: transform 0.3s ease;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #b99461;
+}
 .procedimento:hover {
   transform: translateY(-5px);
 }
@@ -331,4 +338,13 @@ h2 {
     flex-direction: column;
     text-align: center;
   }
+
+  a {
+  color: inherit;
+  text-decoration: none;
+  }
+  a:hover {
+    color: #b99461;
+  }
+
 }
