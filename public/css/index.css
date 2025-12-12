@@ -135,9 +135,7 @@ ul.menu li {
     margin-top: 2rem;
   }
 
-  .hero {
-    background-image: url('../assets/banner2.jpeg');
-  }
+
 
   .menu-toggle {
     display: block;
@@ -177,11 +175,15 @@ ul.menu li {
 
   .hero p.bemvindo {
     position: relative;
-    left: 0;           /* REMOVE o empurrão que quebrava tudo */
-    top: 20%;          /* pode ajustar depois */
+    left: 18rem;
+    top: 30%;
     margin-top: 2rem;
     text-align: center;
-    width: 100%;       /* garante que o texto não ultrapasse a tela */
+    width: 100%;       
+  }
+
+  .bemvindo {
+    color: #ffffff; 
   }
 
   .nowrap {
@@ -208,7 +210,7 @@ ul.menu li {
     flex-direction: column;
   }
   .hero {
-    background-image: url('../assets/banner1m.jpg');
+    background-image: url('../assets/banner2.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
