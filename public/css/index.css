@@ -4,6 +4,12 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+header {
+  position: relative;
+  z-index: 999;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -129,13 +135,17 @@ ul.menu li {
   }
 }
 
+nav {
+    position: relative;
+    overflow-x: hidden;
+}
+
+
 @media (max-width: 768px) {
   .logo {
     display: block;
     margin-top: 2rem;
   }
-
-
 
   .menu-toggle {
     display: block;
@@ -175,12 +185,16 @@ ul.menu li {
 
   .hero p.bemvindo {
     position: relative;
-    left: 18rem;
-    top: 30%;
-    margin-top: 2rem;
+    left: auto;
+    top: auto;
+    font-size: 1.2rem;
+    color: #fff;
+    z-index: 5;
     text-align: center;
-    width: 100%;       
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
   }
+
 
   .bemvindo {
     color: #ffffff; 
@@ -202,10 +216,15 @@ ul.menu li {
   }
 
   .hero-content {
-    margin-left: 0rem;  /* ou 0 se quiser colado */
-    margin-right: 0;
-    text-align: left;
+    position: relative;
+    top: auto;
+    transform: none;
+    text-align: center;
+    width: 90%;
+    padding: 1rem 0;
+    margin: 0 auto;
   }
+
   section.about {
     flex-direction: column;
   }
@@ -214,10 +233,13 @@ ul.menu li {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  } 
+    padding-top: 16 0px; 
+    min-height: auto; 
+    overflow-x: hidden;
+  }
 
   .hero-carousel {
-    height: 70vh; /* Menor altura para celulares */
+    height: 70vh; 
   }
 
   .carousel-btn {
@@ -252,35 +274,61 @@ ul.menu li {
   }
   .footer-column {
     max-width: 400px;
-  }
 
+
+    
+  }
 }
+
 
 
 @media (max-width: 480px) {
   .hero {
-    height: 400px; /* altura menor pra celular */
-    background-position: 90% 28%; /* muda o foco da imagem */
+    height: 400px;
+    padding-top: calc(100px + 3rem); /* empurra mais */
+    background-position: 90% 28%;
   }
-  .hero-content h2 {
+  
+  .hero p.bemvindo {
+    position: relative; 
+    left: auto; 
+    top: auto; 
     font-size: 1.2rem;
+    color: #fff; 
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+    z-index: 5;
+  }
+
+  .hero-content {
+      position: relative;
+      top: auto;
+      transform: none;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+  }
+  
+  .hero-content h2 {
+      font-size: 1.2rem;
   }
   .hero-content p {
-    font-size: 1rem;
+      font-size: 1rem;
   }
 
   .hero-carousel {
-    height: 60vh;
+      height: 60vh;
   }
 
   .carousel-btn {
-    font-size: 1.2rem;
-    padding: 0.3rem 0.5rem;
+      font-size: 1.2rem;
+      padding: 0.3rem 0.5rem;
   }
 
   .dot {
-    width: 8px;
-    height: 8px;
+      width: 8px;
+      height: 8px;
   }
 }
 
