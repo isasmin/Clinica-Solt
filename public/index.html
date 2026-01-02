@@ -1,130 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SOLT - Clínica de Estética</title>
-  <meta name="description" content="Solt Clínica de Estética - Procedimentos faciais, corporais e bem-estar com atendimento humanizado." />
+  <meta name="description"
+    content="Solt Clínica de Estética - Procedimentos faciais, corporais e bem-estar com atendimento humanizado." />
   <link rel="stylesheet" href="./css/index.css">
   <link rel="icon" href="./assets/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="./assets/logo.png" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
+
 <body>
-<header>
-  <nav>
-    <a href="index.html" class="logo">
-      <img src="./assets/logo.png" alt="Logo" />
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="./assets/logo.png" alt="Logo" />
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobrenos.html">Sobre Nós</a></li>
+        <li><a href="procedimentos.html">Procedimentos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--botao wpp-->
+  <div id="whatsappButton">
+    <a href="https://wa.me/5561981572937" target="_blank" aria-label="Falar no WhatsApp">
+      <i class="bi bi-whatsapp"></i>
     </a>
-
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
-    <ul class="menu" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="sobrenos.html">Sobre Nós</a></li>
-      <li><a href="procedimentos.html">Procedimentos</a></li>
-    </ul>
-  </nav>
-</header>
-
-
-<section class="hero" id="home">
-  <p class="bemvindo">
-    <span class="nowrap">Bem-vindo(a)</span> à Clínica SOLT
-  </p>
-
-  <div class="hero-content">
-    <h2>Cuidando da sua beleza com carinho e excelência</h2>
-    <p>Tratamentos personalizados para realçar sua melhor versão em um ambiente acolhedor.</p>
-    <a href="sobrenos.html" class="btn">Ver Mais</a>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="about-text">
-    <h2>Sobre a Solt</h2>
-    <p>Na Solt, aplicamos técnicas avançadas com um olhar humano. Cada detalhe é pensado para que você 
-    se sinta valorizada, acolhida e confiante. Nossa equipe qualificada está pronta para oferecer o melhor em estética facial, corporal, depilação e massagens.</p>
-  </div>
-  <div class="about-image">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=870&q=80" alt="Clínica Solt">
-  </div>
-</section>
-
-<section class="services" id="services">
-  <h2>Tratamentos</h2>
-  <div class="services-grid">
-    <div class="service-item" tabindex="0">
-      <div class="service-title">Facial</div>
-    </div>
-    <div class="service-item" tabindex="0">
-      <div class="service-title">Corporal</div>
-    </div>
-    <div class="service-item" tabindex="0">
-      <div class="service-title">Depilação</div>
-    </div>
-    <div class="service-item" tabindex="0"> 
-      <div class="service-title">Massagem</div>
-    </div>
   </div>
 
-  <a href="procedimentos.html" class="btn">Ver Mais Tratamentos</a>
-</section>
+  <!-- fimmm botao wpp -->
 
+  <section class="hero" id="home">
+    <p class="bemvindo">
+      <span class="nowrap">Bem-vindo(a)</span> à Clínica SOLT
+    </p>
 
-<section class="testimonials" id="testimonials">
-  <h2>O que Nossos Clientes Dizem</h2>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"></script>
-  <iframe onload="iFrameResize(this)" src="https://89d71f1cbd964b1bb314707233de7524.elf.site" style="border:none;width:100%;"></iframe>
-</section>
-
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-column">
-      <h4>Clínica SOLT</h4>
-      <p>Cuidando da sua beleza com carinho e excelência.</p>
+    <div class="hero-content">
+      <h2>Cuidando da sua beleza com carinho e excelência</h2>
+      <p>Tratamentos personalizados para realçar sua melhor versão em um ambiente acolhedor.</p>
+      <a href="sobrenos.html" class="btn">Ver Mais</a>
     </div>
-    <div class="footer-column">
-      <h4>Contato</h4>
-      <a href="https://www.google.com/maps/place/Instituto+SOLT/data=!4m2!3m1!1s0x0:0xd872ad3cc689946e?sa=X&ved=1t:2428&ictx=111"> 📍Ed. Cosmopolitan - R. 30 Norte, Sala 609A - Águas Claras, Brasília - DF, 71918-180</a>
-      <p>📞 +55 (61) 98157-2937</p>
-      <p>✉️ contato@soltclinica.com.br</p>
+  </section>
+
+
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2>Sobre a Solt</h2>
+      <p>Na Solt, aplicamos técnicas avançadas com um olhar humano. Cada detalhe é pensado para que você
+        se sinta valorizada, acolhida e confiante. Nossa equipe qualificada está pronta para oferecer o melhor em
+        estética facial, corporal, depilação e massagens.</p>
     </div>
-    <div class="footer-column">
-      <h4>Informações Legais</h4>
-      <p>CNPJ: 47.817.583/0001-01</p>
-      <p>&copy; 2025 SOLT - Todos os direitos reservados.</p>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=870&q=80"
+        alt="Clínica Solt">
     </div>
-  </div>
-</footer>
+  </section>
 
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.getElementById('menu');
+  <section class="services" id="services">
+    <h2>Tratamentos</h2>
+    <div class="services-grid">
+      <div class="service-item" tabindex="0">
+        <div class="service-title">Facial</div>
+      </div>
+      <div class="service-item" tabindex="0">
+        <div class="service-title">Corporal</div>
+      </div>
+      <div class="service-item" tabindex="0">
+        <div class="service-title">Depilação</div>
+      </div>
+      <div class="service-item" tabindex="0">
+        <div class="service-title">Massagem</div>
+      </div>
+    </div>
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', !expanded);
-  });
-</script>
+    <a href="procedimentos.html" class="btn">Ver Mais Tratamentos</a>
+  </section>
 
 
-<script>
-  let lastScrollTop = 0;
-  const header = document.querySelector('header'); 
+  <section class="testimonials" id="testimonials">
+    <h2>O que Nossos Clientes Dizem</h2>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"></script>
+    <iframe onload="iFrameResize(this)" src="https://89d71f1cbd964b1bb314707233de7524.elf.site"
+      style="border:none;width:100%;"></iframe>
+  </section>
 
-  window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Clínica SOLT</h4>
+        <p>Cuidando da sua beleza com carinho e excelência.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Contato</h4>
+        <a
+          href="https://www.google.com/maps/place/Instituto+SOLT/data=!4m2!3m1!1s0x0:0xd872ad3cc689946e?sa=X&ved=1t:2428&ictx=111">
+          📍Ed. Cosmopolitan - R. 30 Norte, Sala 609A - Águas Claras, Brasília - DF, 71918-180</a>
+        <p>📞 +55 (61) 98157-2937</p>
+        <p>✉️ contato@soltclinica.com.br</p>
+      </div>
+      <div class="footer-column">
+        <h4>Informações Legais</h4>
+        <p>CNPJ: 47.817.583/0001-01</p>
+        <p>&copy; 2025 SOLT - Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
 
-    if (scrollTop > lastScrollTop) {
-      header.classList.add('hide');
-    } else {
-      header.classList.remove('hide');
-    }
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  });
-</script>
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+    });
+  </script>
+
+
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        header.classList.add('hide');
+      } else {
+        header.classList.remove('hide');
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
 
 </body>
+
 </html>
