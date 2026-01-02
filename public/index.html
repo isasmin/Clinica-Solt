@@ -54,31 +54,20 @@
   <h2>Tratamentos</h2>
   <div class="services-grid">
     <div class="service-item" tabindex="0">
-      <div class="service-icon">
-        <img src="url-da-imagem-facial.jpg" alt="Tratamento Facial" />
-      </div>
       <div class="service-title">Facial</div>
     </div>
     <div class="service-item" tabindex="0">
-      <div class="service-icon">
-        <img src="url-da-imagem-corporal.jpg" alt="Tratamento Corporal" />
-      </div>
       <div class="service-title">Corporal</div>
     </div>
     <div class="service-item" tabindex="0">
-      <div class="service-icon">
-        <img src="url-da-imagem-depilacao.jpg" alt="Depilação" />
-      </div>
       <div class="service-title">Depilação</div>
     </div>
-    <div class="service-item" tabindex="0">
-      <div class="service-icon">
-        <img src="url-da-imagem-massagem.jpg" alt="Massagem" />
-      </div>
+    <div class="service-item" tabindex="0"> 
       <div class="service-title">Massagem</div>
     </div>
   </div>
-  <a href="procedimentos.html" class="view-more">Ver Mais Tratamentos</a>
+
+  <a href="procedimentos.html" class="btn">Ver Mais Tratamentos</a>
 </section>
 
 
@@ -86,16 +75,6 @@
   <h2>O que Nossos Clientes Dizem</h2>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js"></script>
   <iframe onload="iFrameResize(this)" src="https://89d71f1cbd964b1bb314707233de7524.elf.site" style="border:none;width:100%;"></iframe>
-</section>
-
-<section class="contact" id="contact">
-  <h2>Entre em Contato</h2>
-  <form onsubmit="event.preventDefault(); alert('Mensagem enviada! Em breve entraremos em contato.'); this.reset();">
-    <input type="text" name="name" placeholder="Seu nome" required aria-label="Seu nome" />
-    <input type="email" name="email" placeholder="Seu e-mail" required aria-label="Seu e-mail" />
-    <textarea name="message" placeholder="Sua mensagem" rows="5" required aria-label="Sua mensagem"></textarea>
-    <button type="submit">Enviar</button>
-  </form>
 </section>
 
 <footer class="footer">
@@ -130,19 +109,16 @@
 </script>
 
 
-<!-- Aqui o script do header -->
 <script>
   let lastScrollTop = 0;
-  const header = document.querySelector('header'); // ajusta se seu header tiver outra classe ou id
+  const header = document.querySelector('header'); 
 
   window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-      // rolou pra baixo — esconde o header
       header.classList.add('hide');
     } else {
-      // rolou pra cima — mostra o header
       header.classList.remove('hide');
     }
 

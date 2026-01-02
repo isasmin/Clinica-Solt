@@ -452,7 +452,22 @@ nav {
   box-shadow: 0 6px 20px rgba(165, 139, 111, 0.7);
 }
 
-/* About Section */
+.services a.btn {
+  display: inline-block;
+  background: #cbb89d;
+  color: #55332f;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(203, 184, 157, 0.6);
+  transition: background 0.3s ease;
+}
+.services a.btn:hover {
+  background: #a58b6f;
+  color: white;
+  box-shadow: 0 6px 20px rgba(165, 139, 111, 0.7);
+}
+
 section.about {
   max-width: 1200px;
   margin: 4rem auto;

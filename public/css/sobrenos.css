@@ -13,15 +13,14 @@ body {
   scroll-behavior: smooth;
 }
 
-/* ===== HEADER ===== */
 header {
   background-color: #D4c098;
   backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
-  height: 140px;          /* define altura menor */
-  line-height: 50px;     /* alinha verticalmente o texto */
-  padding: 0 1rem;       /* ajusta o espaçamento horizontal */
+  height: 140px;          
+  line-height: 50px;    
+  padding: 0 1rem;       
   top: 0;
   left: 0;
   z-index: 100;
@@ -30,7 +29,7 @@ header {
 }
 
 header.hide {
-  top: -50px; /* esconde o header para cima */
+  top: -50px; 
 }
 
 nav {
@@ -41,7 +40,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0; /* sem padding extra para não somar ao do header */
+  padding: 0; 
 }
 
 .logo img {
@@ -50,7 +49,7 @@ nav {
   display: block;
   position: relative;
   top: -1.6px;
-  margin-left: 32px; /* ajuste o valor conforme quiser */
+  margin-left: 32px; 
 }
 
 img {
@@ -58,7 +57,7 @@ img {
   display: block;
 }
 
-/* Menu base */
+
 .menu {
   list-style: none;
   display: flex;
@@ -83,11 +82,9 @@ img {
 }
 
 .menu-toggle {
-  display: none; /* escondido por padrão */
+  display: none; 
 }
 
-
-/* Menu Mobile */
 @media (max-width: 768px) {
    .menu-toggle {
     display: block;
@@ -145,14 +142,12 @@ img {
 }
 
 
-/* ===== CONTEÚDO PRINCIPAL ===== */
 .container {
   max-width: 1000px;
-  margin: 160px auto 2rem; /* margem superior ajustada por causa do header fixo */
+  margin: 160px auto 2rem; 
   padding: 0 1rem;
 }
 
-/* TÍTULOS */
 h1, h2 {
   color: #6b4c3b;
   margin-bottom: 1rem;
@@ -173,7 +168,6 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-/* LISTA DE PROFISSIONAIS */
 #profissionais ul {
   list-style: disc inside;
   font-weight: 400;
@@ -187,7 +181,6 @@ h2 {
   margin-bottom: 0.8rem;
 }
 
-/* GALERIA DE MÍDIA */
 .media-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -204,7 +197,6 @@ h2 {
   box-shadow: 0 2px 8px rgba(107, 76, 59, 0.3);
 }
 
-/* LOCALIZAÇÃO - MAPA */
 #localizacao iframe {
   display: block;
   width: 100%;
@@ -216,14 +208,13 @@ h2 {
   border: none;
 }
 
-/* SOBRE A EMPRESA */
 #sobre-empresa p {
   max-width: 700px;
   margin: 0 auto 3rem;
   font-size: 1.1rem;
   color: #5a4633;
   line-height: 1.7;
-  text-align: center;
+  text-align: left;
 }
 
 .footer {
@@ -258,9 +249,9 @@ h2 {
     display: block;
     color: #3f33089d;
     position: absolute;
-    top: 3rem;   /* distância do topo */
-    right: 1.5rem; /* distância da direita */
-    z-index: 102;  /* garante que fique na frente */
+    top: 3rem;   
+    right: 1.5rem; 
+    z-index: 102;  
   }
   ul.menu {
     position: fixed;
