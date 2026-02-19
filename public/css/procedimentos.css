@@ -43,7 +43,7 @@ nav {
   display: block;
   position: relative;
   top: -1.6px;
-  margin-left: 32px; /* ajuste o valor conforme quiser */
+  margin-left: 32px; 
 }
 
 .menu {
@@ -232,7 +232,6 @@ h2 {
 
 
 
-/* ===== GALERIA DE IMAGENS ===== */
 .media-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -248,7 +247,6 @@ h2 {
   box-shadow: 0 2px 8px rgba(107, 76, 59, 0.3);
 }
 
-/* ===== SOBRE A EMPRESA ===== */
 #sobre-empresa p {
   max-width: 700px;
   margin: 0 auto 3rem;
@@ -258,7 +256,6 @@ h2 {
   text-align: center;
 }
 
-/* ===== FOOTER PADRÃO ===== */
 .footer {
   background-color: #D4c098;
   color: #705151;
