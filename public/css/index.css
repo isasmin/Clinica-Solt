@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -12,6 +14,7 @@ header {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   background: #f7f3ef;
   color: #5a4633;
@@ -22,32 +25,36 @@ body {
 /* estilizacao do botao do wpp */
 
 #whatsappButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    background-color: #25D366;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
 }
+
 #whatsappButton i {
-    color: white;
-    font-size: 30px;
+  color: white;
+  font-size: 30px;
 }
+
 /* fimmmm da estilizacao */
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
 a:hover {
   color: #b99461;
 }
+
 img {
   max-width: 100%;
   display: block;
@@ -59,19 +66,24 @@ header {
   backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
-  height: 140px;          /* define altura menor */
-  line-height: 50px;     /* alinha verticalmente o texto */
-  padding: 0 1rem;       /* ajusta o espaçamento horizontal */
+  height: 140px;
+  /* define altura menor */
+  line-height: 50px;
+  /* alinha verticalmente o texto */
+  padding: 0 1rem;
+  /* ajusta o espaçamento horizontal */
   top: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   padding: 8px 20px;
 }
 
 header.hide {
-  top: -50px; /* esconde o header para cima */
+  top: -50px;
+  /* esconde o header para cima */
 }
+
 nav {
   max-width: 1200px;
   margin: 0 auto;
@@ -130,9 +142,11 @@ ul.menu li {
     padding: 0;
     border-left: none;
   }
+
   .menu-toggle {
     display: none;
   }
+
   ul.menu li a {
     font-weight: 600;
     font-size: 1rem;
@@ -141,16 +155,18 @@ ul.menu li {
     transition: border-color 0.3s ease;
     color: #3f33089d;
   }
+
   .hero p.bemvindo {
-  position: absolute;
-  left: 55rem;
-  top: 45%;
-  font-size: 1.5rem;
-  color: #fff;
-  z-index: 2;
-  margin: 0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
+    position: absolute;
+    left: 55rem;
+    top: 45%;
+    font-size: 1.5rem;
+    color: #fff;
+    z-index: 2;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
   ul.menu li a:hover,
   ul.menu li a.active {
     border-bottom: 2px solid #705D15;
@@ -159,8 +175,8 @@ ul.menu li {
 }
 
 nav {
-    position: relative;
-    overflow-x: hidden;
+  position: relative;
+  overflow-x: hidden;
 }
 
 
@@ -174,10 +190,14 @@ nav {
     display: block;
     color: #3f33089d;
     position: absolute;
-    top: 3rem;   /* distância do topo */
-    right: 1.5rem; /* distância da direita */
-    z-index: 102;  /* garante que fique na frente */
+    top: 3rem;
+    /* distância do topo */
+    right: 1.5rem;
+    /* distância da direita */
+    z-index: 102;
+    /* garante que fique na frente */
   }
+
   ul.menu {
     position: fixed;
     top: 60px;
@@ -186,7 +206,7 @@ nav {
     background: #f7f3ef;
     width: 220px;
     padding: 1rem;
-    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
     transition: transform 0.3s ease;
     border-left: 1px solid #b3afaf;
@@ -195,12 +215,15 @@ nav {
     z-index: 101;
     display: flex;
   }
+
   ul.menu.show {
     transform: translateX(0);
   }
+
   ul.menu li {
     margin-bottom: 1rem;
   }
+
   ul.menu li a {
     font-size: 1rem;
     color: #5a4633;
@@ -220,7 +243,7 @@ nav {
 
 
   .bemvindo {
-    color: #ffffff; 
+    color: #ffffff;
   }
 
   .nowrap {
@@ -251,18 +274,19 @@ nav {
   section.about {
     flex-direction: column;
   }
+
   .hero {
     background-image: url('../assets/banner2.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 16 0px; 
-    min-height: auto; 
+    padding-top: 16 0px;
+    min-height: auto;
     overflow-x: hidden;
   }
 
   .hero-carousel {
-    height: 70vh; 
+    height: 70vh;
   }
 
   .carousel-btn {
@@ -295,8 +319,11 @@ nav {
     text-align: center;
     align-items: center;
   }
+
   .footer-column {
     max-width: 400px;
+
+
 
   }
 }
@@ -306,17 +333,19 @@ nav {
 @media (max-width: 480px) {
   .hero {
     height: 50vh;
-    margin-top: calc(100px + 3rem); /* empurra mais */
+    margin-top: calc(100px + 3rem);
+    /* empurra mais */
     margin-bottom: 5vh;
     background-position: 90% 28%;
   }
-  
+
   .hero p.bemvindo {
-    position: relative; 
-    left: auto; 
-    top: auto; 
+    overflow-x: hidden;
+    position: relative;
+    left: auto;
+    top: auto;
     font-size: 1.2rem;
-    color: #fff; 
+    color: #fff;
     text-align: center;
     margin-bottom: 0.5rem;
     padding: 0 1rem;
@@ -324,33 +353,34 @@ nav {
   }
 
   .hero-content {
-      position: relative;
-      top: auto;
-      transform: none;
-      text-align: center;
-      width: 90%;
-      margin-top: 8vh;
+    position: relative;
+    top: auto;
+    transform: none;
+    text-align: center;
+    width: 90%;
+    margin-top: 8vh;
   }
-  
+
   .hero-content h2 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
+
   .hero-content p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .hero-carousel {
-      height: 60vh;
+    height: 60vh;
   }
 
   .carousel-btn {
-      font-size: 1.2rem;
-      padding: 0.3rem 0.5rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
   }
 
   .dot {
-      width: 8px;
-      height: 8px;
+    width: 8px;
+    height: 8px;
   }
 }
 
@@ -392,10 +422,21 @@ nav {
 }
 
 @keyframes slide {
-  0% { transform: translateX(0); }
-  33% { transform: translateX(-100%); }
-  66% { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+
+  33% {
+    transform: translateX(-100%);
+  }
+
+  66% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 
@@ -418,19 +459,20 @@ nav {
 
 
 @media (max-width: 480px) {
-.hero {
-  position: relative;
-  z-index: 1;
-  min-height: 100vh; 
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  background-image: url('../assets/banner1m.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    background-image: url('../assets/banner1m.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
 }
 
@@ -441,11 +483,12 @@ nav {
   background: linear-gradient(to bottom, rgba(85, 67, 47, 0.6), rgba(0, 0, 0, 0.6));
   z-index: 0;
 }
+
 .hero-content {
   position: relative;
   max-width: 700px;
   z-index: 1;
-  margin-left: 0;  
+  margin-left: 0;
   margin-right: auto;
   text-align: left;
 }
@@ -458,8 +501,10 @@ nav {
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   color: #fff;
   text-align: left;
-  margin-left: 0;      
-  margin-right: 0;     
+  margin-left: 0;
+  
+  margin-right: 0;
+  
 }
 
 .hero-content p {
@@ -468,6 +513,7 @@ nav {
   text-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
   color: #eae0d5;
 }
+
 .hero-content a.btn {
   display: inline-block;
   background: #cbb89d;
@@ -478,6 +524,7 @@ nav {
   box-shadow: 0 4px 14px rgba(203, 184, 157, 0.6);
   transition: background 0.3s ease;
 }
+
 .hero-content a.btn:hover {
   background: #a58b6f;
   color: white;
@@ -494,6 +541,7 @@ nav {
   box-shadow: 0 4px 14px rgba(203, 184, 157, 0.6);
   transition: background 0.3s ease;
 }
+
 .services a.btn:hover {
   background: #a58b6f;
   color: white;
@@ -509,24 +557,29 @@ section.about {
   padding: 0 1rem;
   flex-wrap: wrap;
 }
+
 .about-text {
   flex: 1 1 350px;
 }
+
 .about-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #a58b6f;
 }
+
 .about-text p {
   font-size: 1.125rem;
   line-height: 1.8;
 }
+
 .about-image {
   flex: 1 1 350px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+
 .about-image img {
   width: 100%;
   display: block;
@@ -538,6 +591,7 @@ section.services {
   padding: 4rem 1rem 3rem;
   text-align: center;
 }
+
 .services h2 {
   font-size: 2.75rem;
   color: #a58b6f;
@@ -552,7 +606,8 @@ section.services {
 }
 
 .service-item {
-  background: #cbb89d; /* cor da bola */
+  background: #cbb89d;
+  /* cor da bola */
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -581,7 +636,7 @@ section.services {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .service-title {
@@ -598,11 +653,13 @@ section.testimonials {
   padding: 0 1rem 3rem;
   text-align: center;
 }
+
 .testimonials h2 {
   font-size: 2.5rem;
   color: #a58b6f;
   margin-bottom: 2rem;
 }
+
 .testimonial {
   background: #f5f0e7;
   border-radius: 15px;
@@ -610,7 +667,7 @@ section.testimonials {
   margin-bottom: 1.5rem;
   font-style: italic;
   color: #5a4633;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 section.contact {
@@ -619,17 +676,21 @@ section.contact {
   padding: 0 1rem 4rem;
   text-align: center;
 }
+
 .contact h2 {
   font-size: 2.5rem;
   color: #a58b6f;
   margin-bottom: 1.5rem;
 }
+
 .contact form {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
-.contact input, .contact textarea {
+
+.contact input,
+.contact textarea {
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -637,6 +698,7 @@ section.contact {
   font-size: 1rem;
   resize: vertical;
 }
+
 .contact button {
   background: #cbb89d;
   border: none;
@@ -648,6 +710,7 @@ section.contact {
   box-shadow: 0 6px 15px rgba(203, 184, 157, 0.6);
   transition: background 0.3s ease;
 }
+
 .contact button:hover {
   background: #a58b6f;
   color: white;
@@ -660,6 +723,7 @@ section.contact {
   padding: 3rem 1.5rem;
   font-size: 0.95rem;
 }
+
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -668,15 +732,18 @@ section.contact {
   justify-content: space-between;
   gap: 2rem;
 }
+
 .footer-column {
   flex: 1 1 250px;
   min-width: 200px;
 }
+
 .footer-column h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #533e3e;
 }
+
 .footer-column p {
   margin: 0.3rem 0;
   line-height: 1.5;
@@ -694,26 +761,35 @@ section.contact {
   margin-right: auto;
   margin-left: auto;
 }
+
 @media (min-width: 576px) {
+  .nowrap {
+    padding-left: -5px;
+  }
+
   .container {
     max-width: 540px;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
 }
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
 }
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
@@ -723,7 +799,7 @@ section.contact {
 .logo img {
   width: 150px;
   height: auto;
-  display: block; 
+  display: block;
 }
 
 
@@ -739,10 +815,10 @@ section.contact {
 
 
 
-    /*display: flex;
+/*display: flex;
     /*flex-direction: column;
     /*justify-content: flex-start; /* ou center/end */
-    /*align-items: flex-start;
+/*align-items: flex-start;
     /*min-height: 400px;
     /*position: relative; isso aq tava la no hero
 
