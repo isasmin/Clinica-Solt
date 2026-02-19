@@ -298,8 +298,6 @@ nav {
   .footer-column {
     max-width: 400px;
 
-
-    
   }
 }
 
@@ -423,7 +421,7 @@ nav {
 .hero {
   position: relative;
   z-index: 1;
-  min-height: 100vh;   /* cobre a tela inteira */
+  min-height: 100vh; 
   width: 100%;
   display: flex;
   align-items: center;
@@ -452,7 +450,6 @@ nav {
   text-align: left;
 }
 
-/* Responsive adjustment for hero p.bemvindo */
 
 .hero-content h2 {
   font-size: 2.5rem;
@@ -461,8 +458,8 @@ nav {
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   color: #fff;
   text-align: left;
-  margin-left: 0;      /* garantir que não esteja recuado */
-  margin-right: 0;     /* remover qualquer margem que empurre */
+  margin-left: 0;      
+  margin-right: 0;     
 }
 
 .hero-content p {
@@ -536,7 +533,6 @@ section.about {
   border-radius: 15px;
 }
 
-/* Services Section */
 section.services {
   background: #f5f0e7;
   padding: 4rem 1rem 3rem;
@@ -596,7 +592,6 @@ section.services {
 
 
 
-/* Testimonials */
 section.testimonials {
   max-width: 900px;
   margin: 4rem auto;
@@ -618,7 +613,6 @@ section.testimonials {
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* Contact Section */
 section.contact {
   max-width: 700px;
   margin: 4rem auto;

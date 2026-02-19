@@ -128,7 +128,47 @@ img {
   margin-bottom: 18px;
   color: #6e5a4f;
 }
-  
+
+
+@media (max-width: 480px) {
+
+  #profissionais {
+    padding: 80px 20px;
+  }
+
+  #profissionais h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .profissional {
+    flex-direction: column; 
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .profissional .foto img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    border-radius: 16px;
+  }
+
+  .profissional .conteudo {
+    width: 100%;
+    text-align: left;
+  }
+
+  .profissional h3 {
+    font-size: 1.4rem;
+  }
+
+  .profissional p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+}
 
 @media (max-width: 768px) {
    .menu-toggle {
